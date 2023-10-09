@@ -2,4 +2,5 @@
 
 1. Refactoring code from
    ["goit-react-hw-06-phonebook"](https://github.com/kyr13nko/goit-react-hw-06-phonebook)
-   using [Redux Toolkit](https://redux-toolkit.js.org/)
+
+2. Used [the UI service mockapi.io](https://mockapi.io/) for creating own personal backend
