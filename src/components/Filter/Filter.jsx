@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux';
-import { filterChange } from 'redux/filterSlice';
+import { setFilter } from 'redux/filterSlice';
 
 import { Input, Label } from './Filter.styled';
 
@@ -7,7 +7,7 @@ const Filter = () => {
   const dispatch = useDispatch();
 
   const onFilterChange = ({ target: { value } }) => {
-    dispatch(filterChange(value));
+    dispatch(setFilter(value));
   };
 
   return (

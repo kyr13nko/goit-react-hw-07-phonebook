@@ -1,10 +1,9 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { getContacts } from 'redux/selectors';
-import { createContact } from 'redux/contactsSlice';
+import { addContact } from 'redux/operations';
 
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.min.css';
-import { nanoid } from 'nanoid';
 
 import { Button, Form, Input, Label } from './ContactForm.styled';
 
@@ -28,7 +27,7 @@ const ContactForm = () => {
       return;
     }
 
-    dispatch(createContact({ id: nanoid(), name, number }));
+    dispatch(addContact({ name, number }));
     toast.success(`"${name}" is now in your contacts`);
 
     event.target.reset();
